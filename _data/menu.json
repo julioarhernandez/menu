@@ -15,6 +15,10 @@
           "title": "breakfast title 2",
           "subtitle": "breakfast subtitle 2",
           "price": "$2.00"
+        },
+        {
+          "title": "brakfast title 3",
+          "price": "$20.00"
         }
       ]
     },
