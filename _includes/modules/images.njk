@@ -8,6 +8,9 @@
                         <ul>
                             {% for i in item.items %}
                                 <li>
+                                    {% if i.image %}
+                                        <img src="{{ i.image }}" alt="" />
+                                    {% endif %}
                                     {{ i.title }}------------{{ i.price }}
                                 </li>
                             {% endfor %}

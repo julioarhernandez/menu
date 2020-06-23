@@ -20,3 +20,12 @@ collections: # A list of collections the CMS should be able to edit
             widget: "list"
             fields:
               - {label: name, name: name, widget: string}
+              - label: "items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - {label: title, name: title, widget: string}
+                  - {label: subtitle, name: subtitle, widget: string, required: false}
+                  - {label: price, name: price, widget: string, required: false}
+                  - {label: image, name: image, widget: image, required: false}
+
