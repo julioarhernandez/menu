@@ -38,6 +38,15 @@
           "price": "$2.00"
         }
       ]
+    },
+    {
+      "name": "entree",
+      "items": [
+        {
+          "title": "Filelt mignon",
+          "image": "/assets/img/die_cut_business_cards_450x450.jpg"
+        }
+      ]
     }
   ]
 }
