@@ -10,28 +10,13 @@ collections: # A list of collections the CMS should be able to edit
     name: "home"
     format: "json"
     files:
-      - label: "Hero content"
-        name: "hero-content"
-        file: "_data/hero.json"
+      - label: "Menu"
+        name: "menu"
+        file: "_data/menu.json"
         fields:
           - {label: Title, name: title, widget: string, hint: "The title"}
-          - {label: Subtitle, name: subtitle, widget: string, hint: "The subtitle"}
-          - label: "Button"
-            name: "button"
-            widget: "object"
-            fields:
-              - {label: Text, name: text, widget: string}
-              - {label: Href, name: href, widget: string}
-          - label: "Header Image"
-            name: "image"
-            widget: "object"
-            fields:
-              - {label: Src, name: src, widget: image}
-      - label: "Image Gallery"
-        name: "image-gallery"
-        file: "_data/gallery.json"
-        fields:
-          - label: "Gallery Images"
-            name: "image"
+          - label: "categories"
+            name: "categories"
             widget: "list"
-            field: {label: Image, name: image, widget: image}
+            fields:
+              - {label: name, name: name, widget: string}

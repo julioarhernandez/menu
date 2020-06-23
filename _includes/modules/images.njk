@@ -1,31 +1,22 @@
-  <!-- ##### Testimonial Area Start ##### -->
-  <section  class="gallery-area bg-img  section-padding-100 jarallax" style="background-color: #f2f4f5;">
-    <div class="container">
-    <div class="section-heading text-center">
-            <p>Recent Work</p>
-            <h2><span>Take a moment to view</span> our latest work</h2>
-            <img src="/assets/img/core-img/decor2.png" alt="">
-          </div>
-      <div class="row">
-        <div class="col-12">
-          <!-- Testimonial Slides -->
-          <div class="gallery-slides owl-carousel">
+            <ul>
+                {% for item in menu.categories %}
+                <li>
+                    <div>
+                        {{ item.name }}
+                    </div>
+                    <div>
+                        <ul>
+                            {% for i in item.items %}
+                                <li>
+                                    {{ i.title }}------------{{ i.price }}
+                                </li>
+                            {% endfor %}
+                        </ul>
 
-              {% for item in gallery.image %}
-            <!-- Single Slide -->
-            <div class="single-slide">
-                <div class="gallery-thumbnail">
-                    <a data-fancybox="gallery" href="{{item}}">
-                    {% myImage item | addDotAtStart, 'Our work' %}
-                    </a>
-                </div>
-            </div>
-              {% endfor %}
+                    </div>
+                </li>
+                {% endfor %}
+
+            </ul>
 
 
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ##### Testimonial Area End ##### -->
