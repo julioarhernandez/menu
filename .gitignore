@@ -1,0 +1,9 @@
+node_modules
+.idea/
+_site/
+# Local Netlify folder
+.netlify
+.DS_store
+
+_site/index.html
+/assets/img/optim/

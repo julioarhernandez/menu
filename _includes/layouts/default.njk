@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <!-- Title -->
+  <title>{{ global.title }}</title>
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/img/core-img/favicon.ico">
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div class="preloader d-flex align-items-center justify-content-center">
+    <div class="spinner"></div>
+  </div>
+
+   <!-- ##### Header Area Start ##### -->
+  <header class="header-area">
+    <!-- Top Header Area -->
+    <div class="top-header-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="top-header-content d-flex align-items-center justify-content-between">
+              <!-- Top Header Content -->
+              <div class="top-header-meta">
+                <p>Welcome to <span>The King of Turf</span>, we hope you will enjoy our products and have good experience</p>
+              </div>
+              <!-- Top Header Content -->
+              <div class="top-header-meta text-right">
+                <a href="#" data-toggle="tooltip" data-placement="bottom" title="{{ global.email }}"><i class="fa fa-envelope-o" aria-hidden="true"></i> <span>Email: {{ global.email }}</span></a>
+                <a href="tel:{{ global.phone }}" data-toggle="tooltip" data-placement="bottom" title="{{ global.phone }}"><i class="fa fa-phone" aria-hidden="true"></i> <span>Call Us: {{ global.phone }}</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navbar Area -->
+    <div class="famie-main-menu">
+      <div class="classy-nav-container breakpoint-off">
+        <div class="container">
+          <!-- Menu -->
+          <nav class="classy-navbar justify-content-between" id="famieNav">
+            <!-- Nav Brand -->
+            <a href="/" class="nav-brand"><img src="/assets/img/core-img/kot.svg" alt=""></a>
+            <!-- Navbar Toggler -->
+            <div class="classy-navbar-toggler">
+              <span class="navbarToggler"><span></span><span></span><span></span></span>
+            </div>
+            <!-- Menu -->
+            <div class="classy-menu">
+              <!-- Close Button -->
+              <div class="classycloseIcon">
+                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+              </div>
+              <!-- Navbar Start -->
+              <div class="classynav">
+                {% set navPages = collections.all | eleventyNavigation %}
+                <ul>
+                  {%- for entry in navPages %}
+                  <li{% if entry.url == page.url %} class="active"{% endif %}><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
+                  {%- endfor %}
+                </ul>
+              </div>
+              <!-- Navbar End -->
+            </div>
+          </nav>
+
+          <!-- Search Form -->
+          <div class="search-form">
+            <form action="#" method="get">
+              <input type="search" name="search" id="search" placeholder="Type keywords &amp; press enter...">
+              <button type="submit" class="d-none"></button>
+            </form>
+            <!-- Close Icon -->
+            <div class="closeIcon"><i class="fa fa-times" aria-hidden="true"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ##### Header Area End ##### -->
+  
+
+ {%- block content %}
+    {{ content | safe }}
+ {%- endblock %}  
+  
+
+  <!-- ##### Footer Area Start ##### -->
+  <footer class="footer-area">
+    <!-- Main Footer Area -->
+    <div class="main-footer bg-img bg-overlay bg-overlay-darker section-padding-80-0" style="background-image: url(/assets/img/bg-img/footer.jpg);">
+      <div class="container">
+        <div class="row">
+
+          <!-- Single Footer Widget Area -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="footer-widget mb-80">
+              <a href="#" class="foo-logo d-block mb-30 " ><img src="/assets/img/core-img/kot.svg" alt="" style="
+    width: 90px;"></a>
+              <p>We built our company with a goal to exceed your expectations with the best quality product, while offering you a unique fake grass solution for your lawn needs.</p>
+             
+            </div>
+          </div>
+
+          <!-- Single Footer Widget Area -->
+          <div class="col-12 col-sm-6 col-lg-2">
+            <div class="footer-widget mb-80">
+              <h5 class="widget-title">QUICK LINK</h5>
+              <!-- Footer Widget Nav -->
+              <nav class="footer-widget-nav">
+                <p><a style="color:#ffffff" href="/about/">About us</a></p>
+                <p><a style="color:#ffffff" href="/products/">Our Products</a></p>
+                <p><a style="color:#ffffff" href="/contact/">Contact us</a></p>
+                <p><a style="color:#ffffff" href="/our-services">Our Services</a></p>
+              </nav>
+            </div>
+          </div>
+
+          <!-- Single Footer Widget Area -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="footer-widget mb-80">
+              <h5 class="widget-title">CONTACT US</h5>
+ <div class="contact-info">
+                <p><i class="fa fa-map-pin" aria-hidden="true"></i><span>13280 SW 131st St #110, Miami, FL 33186</span></p>
+                <p><i class="fa fa-envelope" aria-hidden="true"></i><span><a style="color:#ffffff" href="mailto:{{ global.email }}">{{ global.email }}</a></span></p>
+                <p><i class="fa fa-phone" aria-hidden="true"></i><span>+1 305 970 0359</span></p>
+              </div>
+           
+
+              <!-- Single Recent News Start -->
+             
+
+            </div>
+          </div>
+
+          <!-- Single Footer Widget Area -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="footer-widget mb-80">
+              <h5 class="widget-title">STAY CONNECTED</h5>
+              <!-- Footer Social Info -->
+              <div class="footer-social-info">
+                <a href="#">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                  <span>Facebook</span>
+                </a>
+                <a href="https://www.instagram.com/theking_ofturf/" target="_blank">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                  <span>Instagram</span>
+                </a>
+                
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Copywrite Area  -->
+    <div class="copywrite-area">
+      <div class="container">
+        <div class="copywrite-text">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved </a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</p>
+            </div>
+            <div class="col-md-6">
+              <div class="footer-nav">
+                <nav>
+                  <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about/">About</a></li>
+                    <li><a href="/our-products/">Our products</a></li>
+                    <li><a href="/our-services">Our Services</a></li>
+                    <li><a href="/contact/">Contact Us</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- ##### Footer Area End ##### -->
+
+  <!-- ##### All Javascript Files ##### -->
+  <!-- jquery 2.2.4  -->
+  <script src="/assets/js/jquery.min.js"></script>
+  <!-- Popper js -->
+  <script src="/assets/js/popper.min.js"></script>
+  <!-- Bootstrap js -->
+  <script src="/assets/js/bootstrap.min.js"></script>
+  <!-- Owl Carousel js -->
+  <script src="/assets/js/owl.carousel.min.js"></script>
+  <!-- Classynav -->
+  <script src="/assets/js/classynav.js"></script>
+  <!-- Wow js -->
+  <script src="/assets/js/wow.min.js"></script>
+  <!-- Sticky js -->
+  <script src="/assets/js/jquery.sticky.js"></script>
+  <!-- Magnific Popup js -->
+  <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+  <!-- Scrollup js -->
+  <script src="/assets/js/jquery.scrollup.min.js"></script>
+  <!-- Jarallax js -->
+  <script src="/assets/js/jarallax.min.js"></script>
+  <!-- Jarallax Video js -->
+  <script src="/assets/js/jarallax-video.min.js"></script>
+  <!-- Active js -->
+  <script src="/assets/js/active.js"></script>
+  <!-- Fancy box -->
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+</body>
+
+</html>
